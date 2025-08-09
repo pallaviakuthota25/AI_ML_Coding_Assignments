@@ -74,7 +74,7 @@ def llm_function(model,tokenizer,q,a,b,c,d):
             outputs = model.generate(
                 inputs["input_ids"],
                 max_length=5,  # Increased to accommodate YES/NO
-                num_beams=4,
+                num_beams=10,
                 do_sample=False,
                 return_dict_in_generate=True,
                 output_scores=True
